@@ -1,7 +1,7 @@
 ---
 name: "\U0001F41B Bug :"
 about: Bug 발생 시 작성해주세요.
-title: ''
+title: '🐛 Bug:'
 labels: bug
 assignees: ''
 
