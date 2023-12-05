@@ -1,6 +1,14 @@
-// .content-wrapper {
-//   overflow: auto;
-// }
+.components-wrapper {
+	margin: 0 auto;
+	background-color: red; 
+	overflow: auto;
+	max-width: calc(100vw - 50%);
+	min-height: 100vh;
+}
+
+body {
+	background-color: beige; 
+}
 
 // .content-wrapper::-webkit-scrollbar {
 //   display: none;
@@ -35,11 +43,11 @@
 //   width: 100%;
 // }
 
-// body,
-// #root,
-// .App,
-// .app-wrapper,
-// .content-wrapper {
-//   height: 100%;
-//   width: 100%;
-// }
+body,
+#root,
+.App,
+.app-wrapper,
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+}
