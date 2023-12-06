@@ -1,37 +1,14 @@
 import React from 'react';
-import 'header.scss';
+import '../../styles/header.scss';
 import { useNavigate } from 'react-router-dom';
 import searchImg from '../../assets/search.png';
 import backImg from '../../assets/backBtn.png';
 import homeLogo from '../../assets/homeLogo.png';
 
-//뒤로가기
-interface BackButtonProps {
-	type: string;
-}
-
-function BackButton({ type }: BackButtonProps) {
-	const navigate = useNavigate();
-
-	function handleButtonClick() {
-		if (type === 'cancelBtn') {
-			navigate(-1);
-		}
-	}
-	return (
-		<div>
-			<button className="backBtn" onClick={handleButtonClick}>
-				<img src={backImg} />
-				취소
-			</button>
-		</div>
-	);
-}
-
 //제목
 interface HeaderTitleProps {
 	type: string;
-	title: string;
+	title?: string;
 }
 
 function HeaderTitle({ type, title }: HeaderTitleProps) {
@@ -46,67 +23,77 @@ interface SearchHeaderProps {
 }
 
 function SearchHeader({ type }: SearchHeaderProps) {
-	return type === 'search' ? (
+	return type === 'search' || type === 'location' ? (
 		<div className="searchBox">
 			<img src={searchImg} alt="" />
-			<input placeholder="도시 또는 주소 검색" />
+			<input placeholder="도시 또는 주소 검색" className="searchInput" />
 		</div>
 	) : null;
 }
 
 //버튼 헤더 컴포넌트
+
 interface BtnHeaderProps {
 	type: string;
-	title: string;
+	title?: string;
 }
 function BtnHeader({ type, title }: BtnHeaderProps) {
-	return type === 'addBtn' ? (
+	const isAddButton = type === 'addBtn';
+	const buttonClassName = isAddButton ? 'addBtn' : 'delBtn';
+
+	return (
 		<div className="btnheader">
-			<BackButton type="cancelBtn" />
-			<button className="addBtn">{title}</button>
-		</div>
-	) : (
-		<div className="btnheader">
-			<BackButton type="cancelBtn" />
-			<button className="delBtn">{title}</button>
+			<button className="backBtn">
+				<img src={backImg} />
+				<span>취소</span>
+			</button>
+			<button className={buttonClassName}>{title}</button>
 		</div>
 	);
 }
 
 interface HeaderProps {
 	type: string;
-	title: string;
+	title?: string;
 }
 export default function Header({ type, title }: HeaderProps) {
 	switch (type) {
 		case 'logo':
 			return (
-				<div>
-					<img src={homeLogo} alt="" />
+				<div className="headerContainer">
+					<div className="logoBox">
+						<img src={homeLogo} alt="" />
+					</div>
 				</div>
 			);
 		case 'bot':
 			return (
-				<div>
+				<div className="headerContainer">
 					<HeaderTitle type={type} title={title} />
 				</div>
 			);
 		case 'location':
 			return (
-				<div>
+				<div className="headerContainer">
 					<HeaderTitle type={type} title={title} />
 					<SearchHeader type={type} />
 				</div>
 			);
 		case 'search':
 			return (
-				<div>
+				<div className="headerContainer">
 					<SearchHeader type={type} />
+				</div>
+			);
+		case 'button':
+			return (
+				<div className="headerContainer">
+					<BtnHeader type={type} title={title} />
 				</div>
 			);
 		case 'setting':
 			return (
-				<div>
+				<div className="headerContainer">
 					<HeaderTitle type={type} title={title} />
 				</div>
 			);
