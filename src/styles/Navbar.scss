@@ -1,0 +1,7 @@
+@import './utils.scss';
+
+.navbar {
+	height: $navbar-height;
+	background-color: $color-white;
+	font-size: $font-size-sm;
+}
