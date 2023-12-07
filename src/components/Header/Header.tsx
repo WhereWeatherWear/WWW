@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/header.scss';
-// import { useNavigate } from 'react-router-dom';
+import './Header.scss';
+import { useNavigate } from 'react-router-dom';
 import searchImg from '../../assets/search.png';
 import backImg from '../../assets/backBtn.png';
 import homeLogo from '../../assets/homeLogo.png';
@@ -44,7 +44,7 @@ function BtnHeader({ type, title }: BtnHeaderProps) {
 
 	return (
 		<div className="btnheader">
-			<button className="backBtn" onClick={() => navigate(-1)}>
+			<button className="backBtn" type="button" onClick={() => navigate(-1)}>
 				<img src={backImg} alt="" />
 				<span>취소</span>
 			</button>
@@ -59,6 +59,7 @@ interface HeaderProps {
 	type: string;
 	title?: string;
 }
+
 export default function Header({ type, title }: HeaderProps) {
 	switch (type) {
 		case 'logo':
