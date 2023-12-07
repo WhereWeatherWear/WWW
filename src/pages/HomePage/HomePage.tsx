@@ -1,5 +1,5 @@
-import Navbar from 'components/Layout/Navbar';
-import Header from 'components/Layout/Header';
+import Navbar from 'components/Navbar/Navbar';
+import Header from 'components/Header/Header';
 import React from 'react';
 
 // interface HomePageProps {}
@@ -21,11 +21,11 @@ import React from 'react';
 
 export default function HomePage() {
 	return (
-		<div className="components-wrapper">
+		<div className="">
 			<Header type="button" title="추가" />
 			<div className="header-wrapper">Header 자리</div>
 			<div className="main-wrapper">내용물 자리</div>
-			<Navbar />
+			<Navbar page="home" />
 		</div>
 	);
 }
