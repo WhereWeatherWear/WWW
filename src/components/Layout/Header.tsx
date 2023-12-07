@@ -38,13 +38,14 @@ interface BtnHeaderProps {
 	title?: string;
 }
 function BtnHeader({ type, title }: BtnHeaderProps) {
+	const navigate = useNavigate();
 	const isAddButton = type === 'addBtn';
 	const buttonClassName = isAddButton ? 'addBtn' : 'delBtn';
 
 	return (
 		<div className="btnheader">
-			<button type="button" className="backBtn">
-				<img src={backImg} alt="back button" />
+			<button className="backBtn" onClick={() => navigate(-1)}>
+				<img src={backImg} alt="" />
 				<span>취소</span>
 			</button>
 			<button type="button" className={buttonClassName}>
