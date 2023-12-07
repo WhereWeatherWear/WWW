@@ -22,8 +22,8 @@ import React from 'react';
 export default function HomePage() {
 	return (
 		<div className="components-wrapper">
-			<div className="header-wrapper">Header 자리</div>
 			<Header type="button" title="추가" />
+			<div className="header-wrapper">Header 자리</div>
 			<div className="main-wrapper">내용물 자리</div>
 			<Navbar />
 		</div>

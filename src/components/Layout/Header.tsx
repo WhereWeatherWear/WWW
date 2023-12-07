@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../styles/header.scss';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import searchImg from '../../assets/search.png';
 import backImg from '../../assets/backBtn.png';
 import homeLogo from '../../assets/homeLogo.png';
 
-//제목
+// 제목
 interface HeaderTitleProps {
 	type: string;
 	title?: string;
@@ -17,7 +17,7 @@ function HeaderTitle({ type, title }: HeaderTitleProps) {
 	) : null;
 }
 
-//검색
+// 검색
 interface SearchHeaderProps {
 	type: string;
 }
@@ -31,7 +31,7 @@ function SearchHeader({ type }: SearchHeaderProps) {
 	) : null;
 }
 
-//버튼 헤더 컴포넌트
+// 버튼 헤더 컴포넌트
 
 interface BtnHeaderProps {
 	type: string;
@@ -43,11 +43,13 @@ function BtnHeader({ type, title }: BtnHeaderProps) {
 
 	return (
 		<div className="btnheader">
-			<button className="backBtn">
-				<img src={backImg} />
+			<button type="button" className="backBtn">
+				<img src={backImg} alt="back button" />
 				<span>취소</span>
 			</button>
-			<button className={buttonClassName}>{title}</button>
+			<button type="button" className={buttonClassName}>
+				{title}
+			</button>
 		</div>
 	);
 }
