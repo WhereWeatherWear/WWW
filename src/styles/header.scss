@@ -27,14 +27,19 @@
   color: $light-mode-primary;
 }
 .btnheader{
-  display: flex;
-  height: 34px;
-  justify-content: space-between;
-  align-items: center;
+  $f: flex;
+  $sb: space-between;
+  $ct: center;
+  $h: 34px;
+  
+  display: $f;
+  height: $h;
+  justify-content: $sb;
+  align-items: $ct;
   .backBtn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: $f;
+    align-items: $ct;
+    justify-content: $ct;
     img{
       margin-right: 10px;
     }
@@ -45,7 +50,7 @@
   .addBtn,
   .delBtn{
     width: 89px;
-    height: 34px;
+    height: $h;
     background-color: $light-mode-primary;
     color: $color-white;
     border: none;
