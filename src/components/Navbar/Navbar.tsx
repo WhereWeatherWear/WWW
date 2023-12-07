@@ -24,8 +24,8 @@ export default function Navbar({ page }: NavbarProps) {
 			{items.map((item, index) => (
 				<Link to={item.link}>
 					<div className={`nav-${index}`}>
-						<img src={page === item.page ? item.here : item.icon} alt="icon" />
-						<p>{item.title}</p>
+						<img src={page === item.page ? item.here : item.icon} alt={`icon-${item.title}`} />
+						<p style={{ color: page === item.page ? '#384D9D' : '' }}>{item.title}</p>
 					</div>
 				</Link>
 			))}
