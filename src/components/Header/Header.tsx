@@ -80,12 +80,14 @@ export default function Header({ type, title }: HeaderProps) {
 			return (
 				<div className="headerContainer">
 					<HeaderTitle type={type} title={title} />
-					<SearchHeader type={type} />
+					<div className="searchContainer">
+						<SearchHeader type={type} />
+					</div>
 				</div>
 			);
 		case 'search':
 			return (
-				<div className="headerContainer">
+				<div className="searchContainer">
 					<SearchHeader type={type} />
 				</div>
 			);

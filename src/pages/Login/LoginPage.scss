@@ -1,0 +1,62 @@
+@import '../../styles/utils.scss';
+
+.LoginPageWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+		font-size: $font-size-lg;
+  }
+  p{
+    color: $color-title;
+  }
+  .btn-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 15px;
+  }
+  
+  button{
+    display: flex;
+    align-items: center;
+    border: none;
+    min-width: 70%;
+    height: 45px;
+    border-radius: 10px;
+    padding: 0 8px;
+    img{
+      margin-right: -40px;
+    }
+    span{
+      margin: auto;
+    }
+    &.kakaoBtn{
+      background-color: #FDE500;
+      color: #1B1703;
+    }
+    &.naverBtn{
+      background-color: #03c75a;
+      color: $color-white;
+    }
+    &.googleBtn{
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+	footer {
+		position: absolute;
+		bottom: 0;
+		margin: 20px;
+		font-size: $font-size-sm;
+		font-weight: 400;
+	}
+}

@@ -1,29 +1,17 @@
 import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/Header/Header';
 import React from 'react';
-
-// interface HomePageProps {}
-
-// function HomePage(): React.FC<HomePageProps> {
-
-// 	return (
-// 		<div className="components-wrapper">
-// 			{/* <div className='header-wrapper'>Header 자리</div>
-//       <div className='main-wrapper'>내용물 자리</div>
-//       <div className='navbar-wrapper'>Navbar 자리</div> */}
-// 			<div>Header 자리</div>
-// 			<div>내용물 자리</div>
-// 			<Navbar />
-// 		</div>
-// 	);
-
-// }
+// import LoginPage from 'pages/Login/LoginPage';
+import Card from 'components/Cards/LocationCard';
 
 export default function HomePage() {
 	return (
 		<div className="all-wrapper">
 			<Header type="logo" title="추가" />
-			<div className="body-wrapper">HomePage입니다</div>
+			<div className="body-wrapper">
+				HomePage입니다
+				<Card />
+			</div>
 			<Navbar page="home" />
 		</div>
 	);
