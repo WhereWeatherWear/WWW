@@ -1,17 +1,18 @@
 @import '../../styles/utils.scss';
 
 .headerContainer{
-  margin: 0 9px;
+  margin: 0 10px;
 }
 .headerTitle{
   font-size: 36px;
-
+	font-weight: 600;
   color: $color-black;
 }
 //검색창
 .searchBox{
   background-color: $color-search;
-  width: 332px;
+  width: 100%;
+	margin: 15px auto;
   height: 37px;
   border-radius: 10px;
   display: flex;

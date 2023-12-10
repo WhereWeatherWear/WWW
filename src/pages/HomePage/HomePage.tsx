@@ -21,10 +21,9 @@ import React from 'react';
 
 export default function HomePage() {
 	return (
-		<div className="">
-			<Header type="button" title="추가" />
-			<div className="header-wrapper">Header 자리</div>
-			<div className="main-wrapper">내용물 자리</div>
+		<div className="all-wrapper">
+			<Header type="logo" title="추가" />
+			<div className="body-wrapper">HomePage입니다</div>
 			<Navbar page="home" />
 		</div>
 	);

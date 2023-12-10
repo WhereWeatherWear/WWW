@@ -1,0 +1,46 @@
+@import '../../styles/utils.scss';
+
+.card-wrapper {
+	background-color: $light-mode-primary;
+	width: 100%;
+	height: 15vh;
+	border-radius: 10px;
+	padding: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: $color-white;
+
+	.lte {
+		.l {
+			font-size: $font-size-xl;
+			font-weight: 600;
+		}
+		.t {
+			font-size: $font-size-sm;
+			margin: 5px 0 15px 0;
+			color: $sm-info;
+		}
+		.e {
+			font-size: $font-size-lg;
+		}
+	}
+
+	.tlh {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+
+		.t {
+			font-size: 40px;
+			font-weight: 700;
+		}
+		.lh {
+			font-size: $font-size-md;
+			display: flex;
+			gap: 6px;
+		}
+	}
+
+}

@@ -3,15 +3,16 @@
 .navbar-container {
 	height: $navbar-height;
 	background-color: $color-white;
-	font-size: $font-size-sm;
+	font-size: $font-size-md;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	position: absolute;
 	bottom: 0;
-	position: fixed;
+	left: 0;
 	padding: 10px;
-	min-width: 480px;
 	height: 12%;
+	width: 100%;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 약한 그림자 추가 */
 
 	img {
