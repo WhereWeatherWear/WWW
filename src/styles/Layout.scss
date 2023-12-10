@@ -1,0 +1,71 @@
+@import './utils.scss';
+
+body {
+	background-color: beige; 
+}
+
+// Header, 컨텐츠(Body), Navbar 전체를 감싸는 레이아웃 
+// => ~Page 내 최상단 div
+.all-wrapper { 
+	margin: 0 auto;
+	padding: 30px 10px;
+	background-color: $light-mode-background; 
+	overflow: auto;
+	max-width: 420px;
+	min-height: 100vh;
+	position: relative;
+}
+
+.all-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+// Header, Navbar를 제외한 컨텐츠(Body) 내 요소들 전체를 감싸는 레이아웃
+// => 컨텐츠(예: LocationCardList 내 최상단 div 
+.body-wrapper { 
+	margin: 16px 10px;
+	&.list-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+
+// .footer {
+//   height: $footer-size;
+//   text-align: center;
+//   color: rgba(0, 0, 0, 0.85);
+//   font-size: 14px;
+//   background: #f0f2f5;
+//   font-family: 'ubuntu-medium';
+//   bottom: 0;
+//   clear: left;
+//   transform: translateY(-100%);
+
+//   .footer-content {
+//     padding-top: 20px;
+//   }
+// }
+
+// .app-wrapper {
+//   position: relative;
+//   padding: {
+//     top: 80px;
+//     bottom: $footer-size;
+//   }
+// }
+
+// html {
+//   height: 100%;
+//   width: 100%;
+// }
+
+body,
+#root,
+.App,
+.app-wrapper,
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+}

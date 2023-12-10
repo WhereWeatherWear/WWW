@@ -1,0 +1,71 @@
+@import '../../styles/utils.scss';
+
+.headerContainer{
+  margin: 0 10px;
+}
+.headerTitle{
+  font-size: 36px;
+	font-weight: 600;
+  color: $color-black;
+}
+//검색창
+.searchBox{
+  background-color: $color-search;
+  width: 100%;
+	margin: 15px auto;
+  height: 37px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  .searchInput {
+    color: $color-search-font;
+    width: 100%;
+		&.location {
+			cursor: pointer;
+		}
+  }
+}
+// 버튼 헤더
+.backBtn{
+  color: $light-mode-primary;
+}
+.btnheader{
+  $f: flex;
+  $sb: space-between;
+  $ct: center;
+  $h: 34px;
+  
+  display: $f;
+  height: $h;
+  justify-content: $sb;
+  align-items: $ct;
+  .backBtn{
+    display: $f;
+    align-items: $ct;
+    justify-content: $ct;
+    img{
+      margin-right: 10px;
+    }
+    span {
+      line-height: normal;
+    }
+  }
+  .addBtn,
+  .delBtn{
+    width: 89px;
+    height: $h;
+    background-color: $light-mode-primary;
+    color: $color-white;
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+
+//홈 로고
+.logoBox{
+  display: flex;
+  justify-content: center;
+}

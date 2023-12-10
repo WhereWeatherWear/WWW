@@ -1,8 +1,10 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import './styles/layout.scss';
+import Router from 'routes/Router';
 
 function App() {
-	return <h1>hihi</h1>;
+	return <Router />;
 }
 
 export default App;

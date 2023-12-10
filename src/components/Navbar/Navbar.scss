@@ -1,0 +1,31 @@
+@import '../../styles/utils.scss';
+
+.navbar-container {
+	height: $navbar-height;
+	background-color: $color-white;
+	font-size: $font-size-md;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	height: 10%;
+	width: 100%;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 약한 그림자 추가 */
+
+	img {
+		width: 30px;
+		height: 30px;
+	}
+
+	p {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		font-size: $font-size-md;
+		font-weight: 600;
+		cursor: 'pointer';
+	}
+}
