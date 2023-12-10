@@ -4,12 +4,13 @@
   background-color: $light-mode-primary;
   border: none;
   border-radius: 10px;
-  height: 120px;
-  width: 90%;
+  height: 15vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $color-white;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
   .leftSection{
     flex-basis: 60%;
     .location{
