@@ -1,7 +1,7 @@
 import React from 'react';
 import './LocationCard.scss';
 
-export interface LocationProps {
+interface LocationProps {
 	location: string;
 	time: string;
 	tempInfo: {

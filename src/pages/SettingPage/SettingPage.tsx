@@ -27,7 +27,7 @@ export default function SettingPage() {
 		console.log('first click');
 	};
 	const secondClick = () => {
-		console.log('Second option clicked');
+		console.log('second click');
 	};
 	return (
 		<div className="all-wrapper">
