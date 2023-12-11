@@ -1,0 +1,84 @@
+@import '../../styles/Utils.scss';
+
+.option{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: $color-white;
+  background-color: $light-mode-primary;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 3px 0;
+  position: relative;
+  .label,
+  .data{
+    flex: 1;
+  }
+  .label{
+    text-align: left;
+    margin-right: 10px;
+  }
+  .data{
+    text-align: right;
+    margin-right: 10px;
+  }
+  .arrowImg{
+    margin-left: auto;
+    margin-bottom: 3px;
+  }
+}
+.subTitle{
+  font-size: $font-size-xl;
+  color: $light-mode-primary;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-left: 3px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 70px;
+  height: auto;
+  background-color: $light-mode-primary;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+  &.profile{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.privacy{
+  margin: 25px 0;
+  p{
+    font-size: $font-size-md;
+    margin-bottom: 7px;
+  }
+  p:nth-child(1) {
+    font-size: $font-size-xl;
+  }
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    font-size: $font-size-md;
+    padding-left: 0px;
+    .logoutArrow{
+      margin-left: 10px;
+    }
+  }
+}
+
+.option-divider {
+  border: none;
+  width: 90%;
+  border-top: 1px solid $dark-mode-background;
+  margin: 0;
+}

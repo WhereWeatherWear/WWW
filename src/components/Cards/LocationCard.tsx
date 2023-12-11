@@ -14,7 +14,7 @@ export interface LocationProps {
 export default function LocationCard({ location, time, explain, tempInfo }: LocationProps) {
 	return (
 		<div>
-			<div className="container">
+			<div className="containerWrap">
 				<section className="leftSection">
 					<p className="location">{location}</p>
 					<p className="time">{time}</p>

@@ -9,7 +9,7 @@ const CardProps = {
 	time: '오후 10:58',
 	tempInfo: {
 		temperature: 22,
-		feelTemperature: '20°C',
+		feelTemperature: '20',
 	},
 	explain: '대체로 청명함',
 };
