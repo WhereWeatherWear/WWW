@@ -1,0 +1,46 @@
+@import '../../styles/Utils.scss';
+
+.modalWrap{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer{
+  min-width: 320px;
+  min-height: 148.57px;
+  padding-top: 35px;
+  background-color: $color-white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: $color-black;
+  text-align: center;
+  button{
+  background-color: #141414;
+  color: #fff;
+  border: none;
+  min-width: 160px;
+  padding: 14px 63px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: 52px;
+  transition: transform 0.3s ease-in-out;
+
+  &.default {
+    border-top: 0.5px solid #8f8f8f;
+    border-right: 0.5px solid #8f8f8f;
+    border-radius: 0 0 10px 0;
+  }
+  &.delete {
+    border-top: 0.5px solid #8f8f8f;
+    border-left: 0.5px solid #8f8f8f;
+    border-radius: 0 0 0 10px;
+    color: $color-error;
+  }
+}
+}
