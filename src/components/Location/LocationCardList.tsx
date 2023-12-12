@@ -1,6 +1,6 @@
 import React from 'react';
-import LocationCard, { LocationProps } from './LocationCard';
 import { useNavigate } from 'react-router-dom';
+import LocationCard, { LocationProps } from './LocationCard';
 
 interface LocationListProps {
 	locationList: Array<LocationProps>;

@@ -12,16 +12,18 @@ interface OptionProps {
 	lastLine?: boolean;
 }
 
-const Option: React.FC<OptionProps> = ({ label, data, onClick, lastLine }) => (
-	<>
-		<div className="option" onClick={onClick}>
-			<span className="label">{label}</span>
-			<span className="data">{data}</span>
-			<img src={arrow} alt="" className="arrowImg" />
-		</div>
-		{!lastLine && <hr className="option-divider" />}
-	</>
-);
+function Option({ label, data, onClick, lastLine }: OptionProps) {
+	return (
+		<>
+			<div className="option" onClick={onClick} role="presentation">
+				<span className="label">{label}</span>
+				<span className="data">{data}</span>
+				<img src={arrow} alt="" className="arrowImg" />
+			</div>
+			{!lastLine && <hr className="option-divider" />}
+		</>
+	);
+}
 export default function SettingPage() {
 	const firstClick = () => {
 		console.log('first click');
@@ -49,13 +51,13 @@ export default function SettingPage() {
 				<p className="subTitle">개인정보 설정</p>
 				<div className="container">
 					<Option label="성별" data="여성" onClick={firstClick} />
-					<Option label="기본 위치" data="충북제천시" onClick={secondClick} lastLine={true} />
+					<Option label="기본 위치" data="충북제천시" onClick={secondClick} lastLine />
 				</div>
 				<p className="subTitle">설정</p>
 				<div className="container">
 					<Option label="시간대 별 자동 테마 변경" data="ON" onClick={firstClick} />
 					<Option label="공유" data="" onClick={secondClick} />
-					<Option label="언어" data="" onClick={secondClick} lastLine={true} />
+					<Option label="언어" data="" onClick={secondClick} lastLine />
 				</div>
 			</div>
 			<Navbar page="setting" />
