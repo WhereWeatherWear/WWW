@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import searchImg from '../../assets/search.png';
 import backImg from '../../assets/backBtn.png';
 import homeLogo from '../../assets/homeLogo.png';
@@ -23,12 +23,27 @@ interface SearchHeaderProps {
 }
 
 function SearchHeader({ type }: SearchHeaderProps) {
-	return type === 'search' || type === 'location' ? (
-		<div className="searchBox">
-			<img src={searchImg} alt="" />
-			<input placeholder="도시 또는 주소 검색" className="searchInput" />
-		</div>
-	) : null;
+	let content = null;
+
+	if (type === 'location') {
+		content = (
+			<div className="searchBox">
+				<img src={searchImg} alt="" />
+				<Link to="/search">
+					<input placeholder="도시 또는 주소 검색" className="searchInput location" />
+				</Link>
+			</div>
+		);
+	} else if (type === 'search') {
+		content = (
+			<div className="searchBox">
+				<img src={searchImg} alt="" />
+				<input placeholder="도시 또는 주소 검색" className="searchInput" />
+			</div>
+		);
+	}
+
+	return content;
 }
 
 // 버튼 헤더 컴포넌트

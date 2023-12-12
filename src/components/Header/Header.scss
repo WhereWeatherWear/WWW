@@ -22,6 +22,9 @@
   .searchInput {
     color: $color-search-font;
     width: 100%;
+		&.location {
+			cursor: pointer;
+		}
   }
 }
 // 버튼 헤더
