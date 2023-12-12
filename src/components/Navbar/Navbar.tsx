@@ -22,7 +22,7 @@ export default function Navbar({ page }: NavbarProps) {
 	return (
 		<div className="navbar-container">
 			{items.map((item, index) => (
-				<Link to={item.link} key={index}>
+				<Link to={item.link} key={item.title}>
 					<div className={`nav-${index}`}>
 						<img src={page === item.page ? item.here : item.icon} alt={`icon-${item.title}`} />
 						<p style={{ color: page === item.page ? '#384D9D' : '' }}>{item.title}</p>
