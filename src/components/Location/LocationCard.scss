@@ -13,16 +13,16 @@
 
 	.lte {
 		.l {
-			font-size: $font-size-xl;
+			font-size: $font-size-md;
 			font-weight: 600;
 		}
 		.t {
-			font-size: $font-size-md;
+			font-size: $font-size-xs;
 			margin: 5px 0 15px 0;
 			color: $sm-info;
 		}
 		.e {
-			font-size: $font-size-lg;
+			font-size: $font-size-sm;
 		}
 	}
 
@@ -37,7 +37,7 @@
 			font-weight: 700;
 		}
 		.lh {
-			font-size: $font-size-md;
+			font-size: $font-size-xs;
 			display: flex;
 			gap: 6px;
 		}

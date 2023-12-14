@@ -2,6 +2,7 @@
 
 $light-mode-primary: #384D9D;
 $light-mode-background: #F2F7FA;
+$light-mode-block: #dfe6f1;
 
 $dark-mode-primary: #283153;
 $dark-mode-background: #0E0E24;
@@ -12,15 +13,16 @@ $color-black: #000000;
 $color-white: #FFFFFF;
 $color-search: rgba(213, 213, 213, 0.40);
 $color-search-font: #333333;
+$color-weather-info: #808080;
 
 $sm-info: #B1B1B1;
 $lg-info: #FFFFFF;
 
-// $font-size-xs: 10px;
-// $font-size-sm: 12px;
-$font-size-md: 14px;
-$font-size-lg: 16px;
-$font-size-xl: 20px;
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-md: 20px;
+$font-size-lg: 36px;
+$font-size-xl: 40px;
 
 $light-lowest-temp : #0000FF;
 $light-highest-temp : #FFA500;
