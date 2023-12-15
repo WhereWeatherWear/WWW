@@ -1,7 +1,7 @@
 import React from 'react';
 import './WhiteCard.scss';
 
-interface WhiteCardProps {
+export interface WhiteCardProps {
 	tempInfo: {
 		feelTemperature: number;
 	};
@@ -31,9 +31,11 @@ export default function WhiteCard({ tempInfo, precipitation, uv, humidity, title
 	}
 
 	return (
-		<div className="whiteContainer">
-			<p>{title}</p>
-			<p>{value}</p>
-		</div>
+		<section className="white-wrap">
+			<div className="whiteContainer">
+				<p>{title}</p>
+				<p>{value}</p>
+			</div>
+		</section>
 	);
 }
