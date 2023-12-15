@@ -1,4 +1,4 @@
-@import '../../styles/Utils.scss';
+@import '../../styles/utils.scss';
 
 .option{
   display: flex;
@@ -29,7 +29,7 @@
   }
 }
 .subTitle{
-  font-size: $font-size-xl;
+  font-size: $font-size-md;
   color: $light-mode-primary;
   font-weight: 700;
   margin-bottom: 8px;
@@ -57,18 +57,18 @@
 .privacy{
   margin: 25px 0;
   p{
-    font-size: $font-size-md;
+    font-size: $font-size-xs;
     margin-bottom: 7px;
   }
   p:nth-child(1) {
-    font-size: $font-size-xl;
+    font-size: $font-size-md;
   }
   button{
     display: flex;
     align-items: center;
     justify-content: center;
     color: $color-white;
-    font-size: $font-size-md;
+    font-size: $font-size-xs;
     padding-left: 0px;
     .logoutArrow{
       margin-left: 10px;

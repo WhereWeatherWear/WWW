@@ -1,0 +1,64 @@
+@import '../../styles/utils.scss';
+
+.daily-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.day-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;	
+		.day {
+			font-size: $font-size-md;
+			font-weight: 700;
+		}
+		.date{
+			font-size: $font-size-xs;
+			font-weight: 600;
+			color: $color-weather-info;
+		}
+	}
+
+	.weather-info {
+		display: flex;
+		width: 80%;
+		align-items: center;
+		justify-content: space-between;
+		.icons {
+			display: flex;
+			gap: 6px;
+			align-items: center;
+			img {
+				width: 35px;
+				height: 35px;
+				&.divide-line {
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+		}
+		.temps {
+			font-size: $font-size-md;
+			font-weight: 700;
+			display: flex;
+			gap: 20px;
+			width: 40%;
+			justify-content: center;
+			.day {
+				color: $light-lowest-temp;
+			}
+			.night {
+				color: $light-highest-temp;
+			}
+		}
+		.more-btn {
+			cursor: pointer;
+			img {
+				width: 20px;
+			}
+		}
+	}
+}
