@@ -1,7 +1,6 @@
 import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/Header/Header';
 import React from 'react';
-// import LoginPage from 'pages/Login/LoginPage';
 import LocationCard from 'components/Cards/LocationCard';
 import TodayWeather from 'components/Today/TodayWeather';
 import WeeklyWeather from 'components/Weather/WeeklyWeather';
@@ -127,7 +126,9 @@ const weeklyWeatherList = [
 export default function HomePage() {
 	return (
 		<div className="all-wrapper">
-			<Header type="logo" title="추가" />
+			<div className="header-wrapper">
+				<Header type="logo" title="추가" />
+			</div>
 			<div className="body-wrapper">
 				<p className="where">Where I am</p>
 				<LocationCard
@@ -140,7 +141,9 @@ export default function HomePage() {
 				<TodayWeather />
 				<WeeklyWeather weeklyWeatherList={weeklyWeatherList} />
 			</div>
-			<Navbar page="home" />
+			<div className="navbar-wrapper">
+				<Navbar page="home" />
+			</div>
 		</div>
 	);
 }

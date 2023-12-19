@@ -8,6 +8,13 @@ import rainy from '../../assets/weather/rainy.png';
 import downArrow from '../../assets/down-arrow.svg';
 import divideLine from '../../assets/line.png';
 
+import POP from '../../assets/weather/intense-rain.png';
+import sunrise from '../../assets/weather/sunrise.png';
+import sunset from '../../assets/weather/sundown.png';
+import humidity from '../../assets/weather/precipitation.png';
+import chill from '../../assets/weather/chill.png';
+import clothes from '../../assets/clothes/clothes.jpg';
+
 export interface DailyWeatherProps {
 	month: number;
 	date: number;
@@ -78,8 +85,8 @@ export default function DailyWeather({ month, date, day, weatherInfo }: DailyWea
 						<img src={nightIcon} alt="night icon" />
 					</p>
 					<p className="temps">
-						<span className="day">{weatherInfo.lowAndHigh.lowestTemperature}°</span>
-						<span className="night">{weatherInfo.lowAndHigh.highestTemperature}°</span>
+						<p className="day">{weatherInfo.lowAndHigh.lowestTemperature}°</p>
+						<p className="night">{weatherInfo.lowAndHigh.highestTemperature}°</p>
 					</p>
 					<p className="more-btn" onClick={() => showMoreInfo()} role="presentation">
 						<img
@@ -90,7 +97,58 @@ export default function DailyWeather({ month, date, day, weatherInfo }: DailyWea
 					</p>
 				</div>
 			</div>
-			{isOpen && <div>상세정보</div>}
+			{isOpen && (
+				<>
+					<div className="more-info">
+						<div className="info-items">
+							<img src={POP} alt="POP" />
+							<p>
+								<span className="items-title">강수확률</span>
+								<span>{weatherInfo.POP}%</span>
+							</p>
+						</div>
+						<div className="info-items">
+							<img src={sunrise} alt="sunrise" />
+							<p>
+								<span className="items-title">일출</span>
+								<span>{weatherInfo.sunrise}</span>
+							</p>
+						</div>
+						<div className="info-items">
+							<img src={sunset} alt="sunset" />
+							<p>
+								<span className="items-title">일몰</span>
+								<span>{weatherInfo.sunset}</span>
+							</p>
+						</div>
+						<div className="info-items">
+							<img src={humidity} alt="humidity" />
+							<p>
+								<span className="items-title">습도</span>
+								<span>{weatherInfo.humidity}%</span>
+							</p>
+						</div>
+						<div className="info-items">
+							<img src={windy} alt="wind" />
+							<p>
+								<span className="items-title">바람</span>
+								<span>{weatherInfo.wind}</span>
+							</p>
+						</div>
+						<div className="info-items">
+							<img src={chill} alt="wind chill" />
+							<p>
+								<span className="items-title">체감 온도</span>
+								<span>{weatherInfo.windChill}°</span>
+							</p>
+						</div>
+					</div>
+					<div className="clothes-info">
+						<h3>추천 옷차림</h3>
+						<img src={clothes} alt="clothes" />
+					</div>
+				</>
+			)}
 		</>
 	);
 }

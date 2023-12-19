@@ -1,4 +1,5 @@
 import React from 'react';
+import Chatbot from 'components/Chatbot/Chatbot';
 import DailyWeather, { DailyWeatherProps } from './DailyWeather';
 import './WeeklyWeather.scss';
 
@@ -19,6 +20,7 @@ export default function WeeklyWeather({ weeklyWeatherList }: WeeklyWeatherListPr
 						weatherInfo={dailyWeather.weatherInfo}
 					/>
 				))}
+				<Chatbot />
 			</div>
 		</div>
 	);
