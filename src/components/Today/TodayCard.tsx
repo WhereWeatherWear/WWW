@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TodayCard.scss';
 import clody from '../../assets/weather/cloudy-dark.png';
 import windy from '../../assets/weather/windy-dark.png';
@@ -42,6 +42,7 @@ export default function TodayCard({ hourlyWeather, explain }: TodayCardProps) {
 			<p className="today-explain">{explain}</p>
 			<section className="hour-section">
 				{hourlyWeather.map((hour, index) => (
+					// eslint-disable-next-line react/no-array-index-key
 					<div className="hour-box" key={index}>
 						<img src={getWeatherIcon(hour.condition)} alt="hourly icon" />
 						<p className="temp">{hour.tempInfo.temperature}°</p>

@@ -21,9 +21,15 @@ const locationList = [
 export default function LocationPage() {
 	return (
 		<div className="all-wrapper">
-			<Header type="location" title="위치" />
-			<LocationCardList locationList={locationList} />
-			<Navbar page="location" />
+			<div className="header-wrapper">
+				<Header type="location" title="위치" />
+			</div>
+			<div className="body-wrapper list-wrapper">
+				<LocationCardList locationList={locationList} />
+			</div>
+			<div className="navbar-wrapper">
+				<Navbar page="location" />
+			</div>
 		</div>
 	);
 }

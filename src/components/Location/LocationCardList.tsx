@@ -7,7 +7,7 @@ interface LocationListProps {
 
 export default function LocationCardList({ locationList }: LocationListProps) {
 	return (
-		<div className="body-wrapper list-wrapper">
+		<>
 			{locationList.map((location) => (
 				<LocationCard
 					key={location.location}
@@ -17,6 +17,6 @@ export default function LocationCardList({ locationList }: LocationListProps) {
 					explain={location.explain}
 				/>
 			))}
-		</div>
+		</>
 	);
 }

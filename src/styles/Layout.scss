@@ -8,11 +8,21 @@ body {
 // => ~Page 내 최상단 div
 .all-wrapper { 
 	margin: 0 auto;
-	padding: 30px 10px;
+	.header-wrapper {
+		padding: 30px 10px 0px 10px;
+	}
+	.body-wrapper {
+		padding: 0px 10px 30px 10px;
+		position: relative;
+	}
+	.navbar-wrapper {
+		bottom: 0;
+		position: sticky;
+	}
 	background-color: $light-mode-background; 
 	overflow: auto;
 	max-width: 420px;
-	min-height: 100vh;
+	height: 100vh;
 	position: relative;
 }
 
@@ -23,15 +33,57 @@ body {
 // Header, Navbar를 제외한 컨텐츠(Body) 내 요소들 전체를 감싸는 레이아웃
 // => 컨텐츠(예: LocationCardList 내 최상단 div 
 .body-wrapper { 
+	// margin: 16px 10px 10vh 10px;
 	margin: 16px 10px;
 	&.list-wrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
 	}
+
+	position: relative;
 }
 
+.chat-bot {
+	width: 70px;
+  height: 70px;
+  border-radius: 50%;
+	border: $light-mode-primary 5px solid;
+  background-color: $color-white;
+	text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 40%;
+  bottom: 106px;
+  overflow: hidden;
 
+  // a {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 100%;
+  //   height: 100%;
+  //   color: inherit;
+  //   text-decoration: none;
+  // }
+
+  // a::before {
+  //   content: '';
+  //   display: inline-block;
+  //   width: 10px;
+  //   height: 10px;
+  //   margin-right: 10px;
+  //   background-image: url(${plusIcon});
+  //   background-repeat: no-repeat;
+  //   background-size: 10px 10px;
+  // }
+
+  // @media all and (min-width: 520px) {
+  //   right: calc(50% - 240px);
+  // }
+}
 // .footer {
 //   height: $footer-size;
 //   text-align: center;

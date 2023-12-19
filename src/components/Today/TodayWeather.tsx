@@ -1,7 +1,7 @@
 import React from 'react';
 import TodayCard from './TodayCard';
 import WhiteCard from './WhiteCard';
-import '../Today/TodayWeather.scss';
+import './TodayWeather.scss';
 
 const hourlyWeatherProps = {
 	hourly: [
@@ -45,7 +45,7 @@ const WhiteCardProps = {
 export default function TodayWeather() {
 	return (
 		<div>
-			<p>Today's Weather</p>
+			<p>Todays Weather</p>
 			<TodayCard hourlyWeather={hourlyWeatherProps.hourly} explain={hourlyWeatherProps.explain} />
 			<section className="whiteCard-wrap">
 				<WhiteCard

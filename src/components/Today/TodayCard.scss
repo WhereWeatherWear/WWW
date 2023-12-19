@@ -1,35 +1,41 @@
 @import '../../styles/utils.scss';
+
 .today-container {
   width: 100%;
   background-color: $light-mode-primary;
   color: $color-white;
   border-radius: 10px;
-  padding: 15px 10px;
+  padding: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
   margin-bottom: 15px;
+	img {
+		width: 30px;
+		height: 30px;
+	}
   }
 
 .today-explain{
-  font-size: $font-size-xl;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  font-size: $font-size-sm;
 }
 
 .hour-section{
   display: flex;
   overflow: auto;
   gap: 20px;
+	margin-top: 10px;
 }
 
 .hour-box {
   text-align: center;
-  margin-bottom: 10px;
+
   .temp{
-    font-size: $font-size-lg;
-    font-weight: 700;
+    font-size: $font-size-md;
+    font-weight: 600;
   }
   .time{
     width: 55px;
+		font-size: $font-size-xs;
+		padding: 5px 0;
   }
 }
 

@@ -1,0 +1,23 @@
+@import '../../styles/utils.scss';
+
+.chatbox-wrapper {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+
+	.my-msg {
+		display: flex;
+		flex-wrap: wrap;
+		border-radius: 0px 20px 20px 20px;
+		padding: 10px 20px;
+		right: 0;
+		background-color: $light-mode-primary;
+		margin: 10px 0;
+	}
+	.others-msg {
+		border-radius: 0px 20px 20px 20px;
+		padding: 10px 20px;
+		left: 0;
+		background-color: $color-white;
+	}
+}

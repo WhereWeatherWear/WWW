@@ -1,16 +1,19 @@
+import Chatting from 'components/Chatbot/Chatting';
 import Header from 'components/Header/Header';
 import Navbar from 'components/Navbar/Navbar';
 import React from 'react';
 
-export default function SearchPage() {
+export default function ChatbotPage() {
 	return (
 		<div className="all-wrapper">
 			<div className="header-wrapper">
-				<Header type="search" title="위치" />
+				<Header type="bot" title="챗봇" />
 			</div>
-			<div className="body-wrapper">검색페이지</div>
+			<div className="body-wrapper">
+				<Chatting />
+			</div>
 			<div className="navbar-wrapper">
-				<Navbar page="location" />
+				<Navbar page="home" />
 			</div>
 		</div>
 	);

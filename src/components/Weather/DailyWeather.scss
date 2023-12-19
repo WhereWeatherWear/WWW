@@ -44,7 +44,7 @@
 			font-size: $font-size-md;
 			font-weight: 700;
 			display: flex;
-			gap: 20px;
+			gap: 15px;
 			width: 40%;
 			justify-content: center;
 			.day {
@@ -53,6 +53,10 @@
 			.night {
 				color: $light-highest-temp;
 			}
+			p {
+				width: 35px;
+				text-align: center;
+			}
 		}
 		.more-btn {
 			cursor: pointer;
@@ -60,5 +64,48 @@
 				width: 20px;
 			}
 		}
+	}
+}
+
+.more-info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	img {
+		width: 30px;
+		height: 30px;
+	}
+	.info-items {
+		margin: 10px 5px;
+		display: flex;
+		width: 100px;
+		align-items: center;
+		text-align: center;
+		justify-content: flex-start;
+
+		p {
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			font-size: $font-size-xs;
+		}
+
+	.items-title {
+		font-weight: 600;
+	}
+	}
+}
+
+.clothes-info {
+	h3 {
+		font-size: $font-size-sm;
+		font-weight: 600;
+		margin: 5px 0;
+		// text-align: center;
+	}
+	img {
+		width: 100%;
+		border-radius: 10px;
 	}
 }
