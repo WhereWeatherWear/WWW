@@ -62,7 +62,9 @@ export default function SettingPage() {
 					<Option label="언어" data="" onClick={secondClick} lastLine />
 				</div>
 			</div>
-			<Navbar page="setting" />
+			<div className="navbar-wrapper">
+				<Navbar page="setting" />
+			</div>
 		</div>
 	);
 }

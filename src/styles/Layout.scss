@@ -8,6 +8,11 @@ body {
 // => ~Page 내 최상단 div
 .all-wrapper { 
 	margin: 0 auto;
+  position: relative;
+  background-color: $light-mode-background; 
+  overflow: auto;
+  max-width: 420px;
+  height: 100vh;
 	.header-wrapper {
 		padding: 30px 10px 0px 10px;
 	}
@@ -16,14 +21,10 @@ body {
 		position: relative;
 	}
 	.navbar-wrapper {
-		bottom: 0;
-		position: sticky;
+		position: fixed;
+    bottom: 0;
+    width: 420px;
 	}
-	background-color: $light-mode-background; 
-	overflow: auto;
-	max-width: 420px;
-	height: 100vh;
-	position: relative;
 }
 
 .all-wrapper::-webkit-scrollbar {
@@ -55,8 +56,9 @@ body {
   font-weight: 600;
   box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.1);
   position: fixed;
-  right: 40%;
-  bottom: 106px;
+  bottom: 100px;
+  right: 50%;
+  transform: translateX(250%);
   overflow: hidden;
 
   // a {
