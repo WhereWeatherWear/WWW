@@ -1,18 +1,33 @@
 @import '../../styles/utils.scss';
 
+.msg-box {
+	&.chatbot-wrapper {
+		margin-top: 60px;
+		padding: 20px 10px;
+	}
+}
+
+.send {
+	background-color: $light-mode-background;
+	position: fixed;
+	bottom: 0;
+	width: 380px;
+	height: 8vh;
+	display: flex;
+	justify-content: center;
+}
 
 .send-box {
 	background-color: $color-search;
-	position: fixed;
-	bottom: 20vh;
 	border-radius: 15px;
 	width: 380px;
 	height: 40px;
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
+
 	input {
-		width: 80%;
+		width: 90%;
 	}
 	button {
 		text-align: center;

@@ -5,29 +5,34 @@ import send from '../../assets/send.png';
 
 interface Message {
 	text: string;
-	sender: 'me' | 'other';
+	sender: 'bot' | 'person';
 }
 
 export default function Chatting() {
 	const [messages, setMessages] = useState<Message[]>([]);
 	const [newMessage, setNewMessage] = useState<string>('');
 
-	const handleSendMessage = () => {
+	const handleSendMessage = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 		if (newMessage.trim() !== '') {
-			setMessages([...messages, { text: newMessage, sender: 'me' }]);
+			setMessages([...messages, { text: newMessage, sender: 'bot' }]);
 			setNewMessage('');
 		}
 	};
 
 	return (
-		<>
-			<Chatbox messages={messages} />
-			<div className="send-box">
-				<input type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} />
-				<button type="submit" onClick={handleSendMessage}>
-					<img src={send} alt="send img" />
-				</button>
+		<div>
+			<div className="msg-box">
+				<Chatbox messages={messages} />
 			</div>
-		</>
+			<div className="send">
+				<form className="send-box" onSubmit={handleSendMessage}>
+					<input type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} />
+					<button type="submit">
+						<img src={send} alt="send img" />
+					</button>
+				</form>
+			</div>
+		</div>
 	);
 }

@@ -52,6 +52,17 @@ interface BtnHeaderProps {
 	type: string;
 	title?: string;
 }
+
+function BackBtn() {
+	const navigate = useNavigate();
+
+	return (
+		<button type="button" className="back-btn" onClick={() => navigate(-1)}>
+			<img src={backImg} alt="back btn" />
+		</button>
+	);
+}
+
 function BtnHeader({ type, title }: BtnHeaderProps) {
 	const navigate = useNavigate();
 	const isAddButton = type === 'addBtn';
@@ -87,7 +98,8 @@ export default function Header({ type, title }: HeaderProps) {
 			);
 		case 'bot':
 			return (
-				<div className="headerContainer">
+				<div className="headerContainer bot-header">
+					<BackBtn />
 					<HeaderTitle type={type} title={title} />
 				</div>
 			);
