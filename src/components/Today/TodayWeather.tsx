@@ -44,8 +44,8 @@ const WhiteCardProps = {
 
 export default function TodayWeather() {
 	return (
-		<div>
-			<p>Todays Weather</p>
+		<div className="component-wrapper">
+			<h2 className="page-inner-title">Todays Weather</h2>
 			<TodayCard hourlyWeather={hourlyWeatherProps.hourly} explain={hourlyWeatherProps.explain} />
 			<section className="whiteCard-wrap">
 				<WhiteCard
